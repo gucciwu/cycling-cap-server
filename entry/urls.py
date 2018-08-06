@@ -28,7 +28,7 @@ from rest_framework_jwt.views import verify_jwt_token
 
 # Modules
 from dictionary.views import DictionaryViewSet
-from common.views import UserViewSet, GroupViewSet, current_user
+from common.views import UserViewSet, GroupViewSet
 
 schema_view = get_swagger_view(title='API Reference')
 
@@ -39,7 +39,7 @@ router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
-    url(r'^api/users/current', current_user),
+    # url(r'^api/users/current', current_user),
     path('admin/', admin.site.urls),
     url(r'^doc/$', schema_view),
     url(r'^api/token/auth/', obtain_jwt_token),

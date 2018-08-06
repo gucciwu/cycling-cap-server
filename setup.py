@@ -264,5 +264,6 @@ setup(
     license='MIT',
     author='Gucci Wu',
     author_email='gucciwu57@gmail.com',
-    description='A Tour Designer'
+    description='A Tour Designer',
+    install_requires=['pymysql', 'django', 'djangorestframework', 'djangorestframework-jwt']
 )

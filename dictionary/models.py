@@ -10,6 +10,9 @@ class Dictionary(BaseModel):
     def __str__(self):
         return self.entry + '/' + self.key
 
+    class Meta:
+        db_table = 'dictionary'
+
 
 
 
