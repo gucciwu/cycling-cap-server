@@ -62,12 +62,12 @@ AUTHENTICATION_BACKENDS = (
 )
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_PERMISSION_CLASSES': (
-    #     'rest_framework.permissions.IsAuthenticated',
-    # ),
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-    # ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
     'DEFAULT_PARSER_CLASSES': ('rest_framework.parsers.JSONParser',),
     'DEFAULT_RENDERER_CLASSES': (
             'rest_framework.renderers.JSONRenderer',
@@ -203,7 +203,7 @@ LOGGING = {
 }
 
 SITE = {
-    'name': 'GWQuant'
+    'name': 'Cycling Cap'
 }
 
 ADMIN_SITE = {
@@ -211,3 +211,5 @@ ADMIN_SITE = {
     'site_header': SITE['name'] + ' administration',
     'index_title': SITE['name'] + ' administration',
 }
+
+APPEND_SLASH = False
