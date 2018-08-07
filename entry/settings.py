@@ -41,13 +41,16 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'guardian',
     'dictionary',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsPostCsrfMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -62,6 +65,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 REST_FRAMEWORK = {
+    'SCHEMA_COERCE_PATH_PK': False,
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
@@ -211,5 +215,3 @@ ADMIN_SITE = {
     'site_header': SITE['name'] + ' administration',
     'index_title': SITE['name'] + ' administration',
 }
-
-APPEND_SLASH = False

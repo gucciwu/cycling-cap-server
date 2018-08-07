@@ -38,12 +38,12 @@ router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
-    url(r'^api/', include(router.urls)),
+    url('api/', include(router.urls)),
     # url(r'^api/users/current', current_user),
     path('admin/', admin.site.urls),
     url(r'^doc/$', schema_view),
     url(r'^api/token/auth', obtain_jwt_token),
     url(r'^api/token/refresh', refresh_jwt_token),
     url(r'^api/token/verify', verify_jwt_token),
-    url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api/auth', include('rest_framework.urls', namespace='rest_framework'))
 ]

@@ -18,9 +18,6 @@ SOFT_DELETION = 4
 
 class BaseViewSet(viewsets.ModelViewSet):
 
-    authentication_classes = (SessionAuthentication, BasicAuthentication)
-    permission_classes = (IsAdminUser,)
-
     def perform_create(self, serializer):
         user = UserUtils.get_user_from_request(self.request)
         instance = serializer.save(owner=user, created_by=user, modified_by=user)
@@ -111,6 +108,4 @@ class BaseViewSet(viewsets.ModelViewSet):
 
 
 class BaseAPIView(APIView):
-    authentication_classes = (SessionAuthentication, BasicAuthentication)
-    permission_classes = (IsAdminUser,)
-
+    pass
