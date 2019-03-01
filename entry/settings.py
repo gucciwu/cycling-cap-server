@@ -221,6 +221,6 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 
 ACCESS_KEYS = {
-    'baidu_map': 'fV1GGhTs7WEuLmUpHL8VU4rwkRwkxz80',
-    'google_map': 'AIzaSyAQMvKxsqPIrSIv8KLdE-T2xkVah-CoXio'
+    'BAIDU_MAP': 'fV1GGhTs7WEuLmUpHL8VU4rwkRwkxz80',
+    'GOOGLE_MAP': 'AIzaSyAQMvKxsqPIrSIv8KLdE-T2xkVah-CoXio'
 }

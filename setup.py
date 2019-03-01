@@ -265,5 +265,5 @@ setup(
     author='Gucci Wu',
     author_email='gucciwu57@gmail.com',
     description='A Tour Designer',
-    install_requires=['pymysql', 'django', 'djangorestframework', 'djangorestframework-jwt']
+    install_requires=['pymysql', 'django', 'djangorestframework', 'djangorestframework-jwt', 'googlemaps']
 )
