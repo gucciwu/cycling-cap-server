@@ -30,6 +30,7 @@ from rest_framework_jwt.views import verify_jwt_token
 from dictionary.views import DictionaryViewSet
 from common.views import UserViewSet, GroupViewSet
 
+
 schema_view = get_swagger_view(title='API Reference')
 
 router = routers.DefaultRouter()

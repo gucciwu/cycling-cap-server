@@ -96,7 +96,7 @@ class BaseViewSet(viewsets.ModelViewSet):
 
         The default implementation creates an admin LogEntry object.
         """
-        from django.contrib.admin.models import LogEntry, DELETION
+        from django.contrib.admin.models import LogEntry
         return LogEntry.objects.log_action(
             user_id=user.pk,
             content_type_id=get_content_type_for_model(object).pk,
